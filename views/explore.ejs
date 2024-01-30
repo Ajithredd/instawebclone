@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <link rel="stylesheet" href="/stylesheets/explore.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="shortcut icon" type="image/x-icon" href="https://i.pinimg.com/originals/a2/5f/4f/a25f4f58938bbe61357ebca42d23866f.png" sizes="32x32"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top">
+        <div class="top-items">
+            <div class="logo-area">
+               <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="logo" width="103"></div></a>
+            </div>
+             <a href="/search">
+            <div class="search-box sb">
+                <input type="text" class="search" placeholder="search">
+                <span class="ic"><img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/search-512.png" alt="search" height="10px"></span>
+            </div>
+        </a>
+
+            <div class="acct-actions">
+
+                <div class="actions">
+                    <a href="/feed" class="li">
+                        <img height="24px" src="https://static.thenounproject.com/png/17705-200.png" alt="explore">    
+                     </a>
+                    <a href="/explore" class="li">
+                       <img height="24px" src="https://cdn.iconscout.com/icon/free/png-512/explore-1781524-1513844.png" alt="explore">
+                    </a>
+                    <a href="/upload" class="li">
+                        <img height="24px" src="/images/create.png" alt="create.png">    
+                     </a>
+                    <a href="/notifications" class="li">
+                        <img height="24px" src="https://www.pinclipart.com/picdir/big/33-337369_heart-shaped-clipart-instagram-heart-sign-icon-transparent.png" alt="love">
+                     </a>
+                     
+                     <a href="/profile" class="li">
+                        <img height="24px" src="/images/uploads/<%= user.picture %>" alt="user" style="border-radius: 45%; overflow :hidden ">
+                     </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <% posts.reverse().forEach(function(post){ %>
+        <div class="item">
+            <img src="/images/uploads/<%= post.picture %>" alt="" class="img">
+        </div>
+        <%})%>
+        
+    </div>
+</body>
+</html>
